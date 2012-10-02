@@ -2,9 +2,13 @@
 	Name: 				FTL Additional Events & Texts (FTL: AET)
 	Description: 		Adds new texts and new events to the game. Awesome!
 	Author: 			Allan Kimmer Jensen
-	Contributors: 		None, yet.
+	Contributors: 		Look at the Readme
 	Version:			0.1
 -->
 <textList name="GAMEOVER">
 	<text>Your incompetence or lack of capability, has secured the rebels victory.</text>
+	<text>As the precious data your crew was transporting is spread ever wider through the endless depths of space, the rebel fleet advances their victory assured by your failure.</text>
+	<text>All the lives that have been lost or cut short for your transport of data was for nought. The rebel fleet pushes relentlessly on.</text>
+	<text>Great responsibility was bestowed upon you when you were entrusted with the secret data on the rebel ship. Those who chose you were sadly wrong about your potential.</text>
+	<text>As your ship drifts apart, shattered under the weight of the rebels, and all the evils space could muster, thrust upon it, the Federation prepares to take its last shuddering breath.</text>
 </textList>

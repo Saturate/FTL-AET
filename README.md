@@ -9,3 +9,8 @@ You can do following things to contribute:
 - Make a issue, with the idea/text.
 - Make a pull-request.
 - Send me a message on the offical forums.
+
+## Credits
+Thanks to these people for helping out, if you are missing let me know.
+
+- MitchLux
