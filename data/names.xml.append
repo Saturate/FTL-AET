@@ -1,0 +1,19 @@
+<!-- 
+	Name: 				FTL Additional Events & Texts (FTL: AET)
+	Description: 		Adds new texts and new events to the game. Awesome!
+	Author: 			Allan Kimmer Jensen
+	Contributors: 		Look at the Readme
+	Version:			0.1
+
+
+<nameList race="human" sex="female">
+	<name>Anna</name>
+	<name>Mai</name>
+</nameList>
+
+<nameList race="human" sex="male">
+	<name>Allan</name>
+	<name>Adam</name>
+</nameList>
+-->
+
