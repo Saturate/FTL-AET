@@ -1,4 +1,11 @@
-FTL-AET
-=======
-
+# FTL: Additional Events & Texts
 Adds new texts and new events to the game. Awesome!
+
+## Install
+Use [Grognak's Mod Manager](http://www.ftlgame.com/forum/viewtopic.php?f=12&t=2464). Just put the .FTL file in the mod folder.
+
+## Contribute
+You can do following things to contribute:
+- Make a issue, with the idea/text.
+- Make a pull-request.
+- Send me a message on the offical forums.

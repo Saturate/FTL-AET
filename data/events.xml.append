@@ -1,0 +1,10 @@
+<!-- 
+	Name: 				FTL Additional Events & Texts (FTL: AET)
+	Description: 		Adds new texts and new events to the game. Awesome!
+	Author: 			Allan Kimmer Jensen
+	Contributors: 		None, yet.
+	Version:			0.1
+-->
+<textList name="GAMEOVER">
+	<text>Your incompetence or lack of capability, has secured the rebels victory.</text>
+</textList>
