@@ -118,3 +118,103 @@
       </choice>
    </event>
 </eventList>
+
+<!-- Don't touch anything below this line. -->
+
+<!-- 
+	Event Name(s): 	Any event I make will go in this. Also don't touch my events.
+	Description:	EVENTS AND SHIT.
+	Author:		PvtVain/AnnuskaChan
+-->
+
+<!-- REPEATABLE -->
+
+<event name="ASTEROID_MINING">
+	<text>Ready to jump again, you spot a asteroid inside the asteroid field, full of rare metals. They could be traded in for scrap if mined.</text>
+		<choice hidden="true">
+			<text>Try and mine the asteroid with fear of stray asteroid pieces.</text>
+			<event load="ASTEROID_MINING_RESULTS"/>
+		</choice>
+		<choice hidden="true">
+			<text>Forget it and quickly prepare to jump to avoid any damage.</text>
+			<event/>
+		</choice>
+</event>
+
+<eventList name="ASTEROID_MINING_RESULTS">
+		<event>
+			<text>You failed to mine any rare metals and took slight hull damage.</text>
+			<damage amount="2"/>
+		</event>
+		<event>
+			<text>You failed to mine any rare metals and took slight hull damage.</text>
+			<damage amount="2"/>
+		</event>
+		<event>
+			<text>You failed to mine any rare metals and took slight hull damage.</text>
+			<damage amount="2"/>
+		</event>
+		<event>
+			<text>You failed to mine any rare metals and took slight hull damage.</text>
+			<damage amount="2"/>
+		</event>
+		<event>
+			<text>You were able to mine 15 rare metals but took light damage.</text>
+			<damage amount="5"/>
+			<quest event="ASTEROID_MINING_15"/>
+		</event>
+		<event>
+			<text>You were able to mine 15 rare metals but took light damage.</text>
+			<damage amount="5"/>
+			<quest event="ASTEROID_MINING_15"/>
+		</event>
+		<event>
+			<text>You were able to mine 30 rare metals but took medium damage.</text>
+			<damage amount="10"/>
+			<quest event="ASTEROID_MINING_30"/>
+		</event>
+		<event>
+			<text>You were able to mine 60 rare metals but took heavy damage.</text>
+			<damage amount="15"/>
+			<quest event="ASTEROID_MINING_60"/>
+		</event>
+		<event>
+			<text>You were able to mine 90 rare metals but took extreme damage.</text>
+			<damage amount="20"/>
+			<quest event="ASTEROID_MINING_90"/>
+		</event>
+</eventList>
+
+<event name="ASTEROID_MINING_15">
+	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 15 rare metals, he replies "20 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
+		<item_modify>
+			<item type="scrap" min="20" max="20"/>
+		</item_modify>
+</event>
+
+<event name="ASTEROID_MINING_30">
+	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 30 rare metals, he replies "40 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
+		<item_modify>
+			<item type="scrap" min="40" max="40"/>
+		</item_modify>
+</event>
+
+<event name="ASTEROID_MINING_60">
+	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 60 rare metals, he replies "70 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
+		<item_modify>
+			<item type="scrap" min="70" max="70"/>
+		</item_modify>
+</event>
+
+<event name="ASTEROID_MINING_90">
+	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 90 rare metals, he replies "100 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
+		<item_modify>
+			<item type="scrap" min="100" max="100"/>
+		</item_modify>
+</event>
+
+<!-- SEMI-REPEATABLE -->
+
+<!-- NOT REPEATABLE -->
+
+<!-- Don't touch anything above this line. -->
