@@ -25,5 +25,6 @@
 
 	<!-- CUSTOM AET EVENTS 	-->
 	<event load="AET_GIFTS"/>
+	<event load="ASTEROID_MINING"/>
 
 </eventList>
