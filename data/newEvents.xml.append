@@ -1,0 +1,29 @@
+<!-- 
+	FTL Additional Events & Texts (FTL: AET)
+
+	We might want to add custom eventLists to sectors like this in the future:
+
+	<eventList name="AET_SPECIAL">
+		<event load="AET_PUZZLE"/>
+	</eventList>
+
+
+-->
+
+<eventList name="NEUTRAL2">
+	<event load="PIRATE_CIVILIAN"/>
+	<event load="PIRATE_STATION_CROPS"/>
+	<event load="REBEL_TRANSPORT"/>
+	<event load="ASTEROID_EXPLORE"/>
+	<event load="MERCENARY"/>
+	<event load="DISTRESS_BEACON"/>
+	<event load="FRIENDLY_SLAVER"/>
+	<event load="PIRATE_BRIBER"/>
+	<event load="AUTO_DEFENSE_MAP"/> 
+	<event load="AUTO_DEFENSE_ITEM"/> 
+	<!-- <event load="TAVERN_HIRE"/> -->
+
+	<!-- CUSTOM AET EVENTS 	-->
+	<event load="AET_GIFTS"/>
+
+</eventList>

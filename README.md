@@ -17,3 +17,4 @@ You can do following things to contribute:
 Thanks to these people for helping out, if you are missing let me know.
 
 - MitchLux
+- TheKillerNacho (Timothy Sharpe)

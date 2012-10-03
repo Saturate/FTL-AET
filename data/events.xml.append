@@ -5,6 +5,7 @@
 	Contributors: 		Look at the Readme
 	Version:			0.1
 -->
+
 <textList name="GAMEOVER">
 	<text>Your incompetence or lack of capability, has secured the rebels victory.</text>
 	<text>As the precious data your crew was transporting is spread ever wider through the endless depths of space, the rebel fleet advances their victory assured by your failure.</text>
@@ -12,3 +13,108 @@
 	<text>Great responsibility was bestowed upon you when you were entrusted with the secret data on the rebel ship. Those who chose you were sadly wrong about your potential.</text>
 	<text>As your ship drifts apart, shattered under the weight of the rebels, and all the evils space could muster, thrust upon it, the Federation prepares to take its last shuddering breath.</text>
 </textList>
+
+<!-- 
+	Event Name: 		PUZZLE MAN
+	Description: 		You get a offer to slove a great puzzle, will you try it?
+	Author: 			Allan Kimmer Jensen
+
+<event name="AET_PUZZLE_MAN">
+	<text>A old man needs your help. His friends has been traped in a locked room. The room can only be unlocked with the right awnsers. He warns you that it might not be safe to be unsure.</text>
+	<choice>
+		<text>Accept the challenge.</text>
+		<event load="AET_PUZZLE_MAN_ENTER">
+	</choice>
+	<choice>
+		<text>Ask what he means by unsafe...</text>
+		<event>
+			<text>"It is said that it can explode, leaving all its secrets behind."</text>
+			<choice>
+				<text>Accept the challenge.</text>
+				<event load="AET_PUZZLE_MAN_ENTER">
+			</choice>
+			<choice>
+				<text>Tell him that you would perfer not to take the risk and leave.</text>
+				<event load="AET_PUZZLE_MAN_LEAVE">
+			</choice>
+		</event>
+	</choice>
+	<choice>
+		<text>Apologize, wish him luck, and continue.</text>
+		<event load="AET_PUZZLE_MAN_LEAVE">
+	</choice>
+</event>
+
+
+<eventList name="AET_PUZZLE_MAN_ENTER">
+	<event>
+		<text>The first question is: "What is the square root of 25?"</text>
+		<choice>
+			<text>The answer is 5</text>
+			<event>
+				<text>This is correct!</text>
+				<autoReward level="HIGH">scrap_only</autoReward>
+				<reveal_map/>
+			</event>
+		</choice>
+		<choice>
+			<text>The answer is 4.5767</text>
+			<event load="AET_PUZZLE_MAN_FAIL">
+		</choice>
+		<choice>
+			<text>The answer is 2</text>
+			<event load="AET_PUZZLE_MAN_FAIL">
+		</choice>
+	</event>
+</eventList>
+
+<eventList name="AET_PUZZLE_MAN_LEAVE">
+	<event>
+		<text>"It is properly for the best, you don't seem that bright anyway."</text>
+	</event>
+</eventList>
+
+<eventList name="AET_PUZZLE_MAN_FAIL">
+	<event>
+		<text>You failed. You hear a count down "1... 2... 3..." while you try to runaway one of your men dies.</text>
+	</event>
+</eventList>
+-->
+
+<!-- 
+	Event Name: 		GIFT EVENTS
+	Description: 		Some GIFT Events
+	Author: 			TheKillerNacho
+-->
+<eventList name="AET_GIFTS">
+   <event>
+      <text>You are hailed by a Federation base on a nearby planet. After hearing about your mission, the station's commander decides to give you a weapon they confiscated from a pirate recently.</text>
+      <weapon name="RANDOM"/>
+   </event>
+   <event>
+      <text>You are hailed by a Federation ship that is badly damaged. After hearing about your mission, the lone survivor agrees to join your crew.</text>
+      <crewMember amount="1">Jean-Luc Picard</crewMember>
+   </event>
+   <event>
+      <text>You are hailed by a Federation science station. After hearing about your mission, they agree to give you supplies and a new technology they were developing.</text>
+      <autoReward level="MED">augment</autoReward>
+   </event>
+   <event>
+      <text>You are hailed by a Federation refueling station. After hearing about your mission, they agree to give you some supplies and fuel for your journey.</text>
+      <autoReward level="MED">fuel</autoReward>
+   </event>
+   <event>
+      <text>You are hailed by the leader of a nearby planet. After hearing about your mission, the diplomat says "I'd like to help, but I don't know if I can trust you."</text>
+      <choice hidden="true" >
+         <text>Continue...</text>
+         <event/>
+      </choice>
+      <choice hidden="true" req="human">
+         <text>(Human Crew) Have your Human crew member try Diplomacy.</text>
+         <event>
+            <text>You have your Human crew member attempt to negociate with the diplomat. Eventually, he agrees to aid you by giving you a large sum of supplies.</text>
+            <autoReward level="HIGH">standard</autoReward>
+         </event>               
+      </choice>
+   </event>
+</eventList>

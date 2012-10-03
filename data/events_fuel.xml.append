@@ -1,14 +1,28 @@
 <!-- 
-	Name: 				FTL Additional Events & Texts (FTL: AET)
-	Description: 		Adds new texts and new events to the game. Awesome!
-	Author: 			Allan Kimmer Jensen
+	FTL Additional Events & Texts (FTL: AET)
 -->
 
 <eventList name="NO_FUEL">
-	<event load="FUEL_TRADE_A_LIFE"/>
+	<event load="FUEL_FLEET_DELAY"/>
+	
+	<event load="FUEL_NOTHING"/>
+	<event load="FUEL_NOTHING"/>
+	<event load="FUEL_NOTHING"/>
+	<event load="FUEL_NOTHING"/>
+	
+	<event load="FUEL_TRADER"/>
+	<event load="FUEL_EXPLORE"/>
+	<event load="FUEL_APPROACH"/>
+	<event load="FUEL_OFF_ENGI_DUBIOUS"/>
+	<event load="FUEL_OFF_ROCK_WRECK"/>
+
+
+	<!-- Custom AET Events -->
+	<event load="AET_FUEL_TRADE_A_LIFE"/>
+
 </eventList>
 
-<event name="FUEL_TRADE_A_LIFE">   
+<event name="AET_FUEL_TRADE_A_LIFE">   
 	<text>A slug ship approaches you. You hear them say "Perhpassss we can help you, for the modreatate price of a life. We need it for expirements. We have lots of fuelssss..."</text>
 	<choice>
 		<text>Give them a random crew member for fuel.</text>
