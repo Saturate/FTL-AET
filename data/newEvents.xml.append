@@ -24,7 +24,9 @@
 
 	<!-- CUSTOM AET EVENTS 	-->
 	<event load="AET_GIFTS"/>
-	<event load="ASTEROID_MINING"/>
 	<event load="AET_PREFTL_PLANET"/>
+
+	<!-- EVENTS BY PVTVAIN  -->
+	<event load="ASTEROID_MINING"/>
 
 </eventList>
