@@ -22,13 +22,13 @@
 	TODO: Needs work before included, feel free to add anything, also I am not sure the syntax is correct!
 
 <event name="AET_PUZZLE_MAN">
-	<text>An old man needs your help. His friends has been locked inside a room. The room can only be unlocked with the right awnsers. He warns you that it might not be safe to be unsure.</text>
+	<text>An old man needs your help. His friends have been locked inside a room. The room can only be unlocked with the right answers. He warns you that his challenge is dangerous.</text>
 	<choice>
 		<text>Accept the challenge.</text>
 		<event load="AET_PUZZLE_MAN_ENTER">
 	</choice>
 	<choice>
-		<text>Ask what he means by unsafe...</text>
+		<text>Ask how is it dangerous.</text>
 		<event>
 			<text>"It is said that it can explode, leaving all its secrets behind."</text>
 			<choice>
