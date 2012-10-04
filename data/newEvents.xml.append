@@ -28,5 +28,6 @@
 
 	<!-- EVENTS BY PVTVAIN  -->
 	<event load="ASTEROID_MINING"/>
+	<event load="RANDOM_DEATHS"/>
 
 </eventList>
