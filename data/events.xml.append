@@ -1,9 +1,11 @@
 <!-- 
 	Name: 				FTL Additional Events & Texts (FTL: AET)
-	Description: 		Adds new texts and new events to the game. Awesome!
-	Author: 			Allan Kimmer Jensen
-	Contributors: 		Look at the Readme
-	Version:			0.1
+-->
+
+<!-- 
+	Name: 				Extra gameover texts
+	Description: 		Should add some new gameover textts, but they do not work.
+	Author(s): 			Saturate/All4n
 -->
 
 <textList name="GAMEOVER">
@@ -17,7 +19,7 @@
 <!-- 
 	Event Name: 		PUZZLE MAN
 	Description: 		You get a offer to solve a great puzzle, will you try it?
-	Author: 			Allan Kimmer Jensen
+	Author: 			Saturate/All4n
 	
 	TODO: Needs work before included, feel free to add anything, also I am not sure the syntax is correct!
 
@@ -86,12 +88,8 @@
 <!-- 
 	Event Name: 		Pre-FTL Society Event
 	Author: 			TheKillerNacho
-	
-	
-	NEEDS TESTING BEFORE INCLUDED
-	
-	
-	<event name="AET_PREFTL_PLANET">
+-->
+<event name="AET_PREFTL_PLANET">
    <text>You come across a planet inhabited by human-like aliens that seem to be a pre-FTL society. Usually it isn't Federation policy to interfere in the affairs of pre-FTL societies, but the planet appears to have an abundance of natural resources that could be helpful.</text>
    <choice hidden="true">
       <text>Do nothing to interfere</text>
@@ -151,7 +149,6 @@
    </event>
 </eventList>
 	
--->
 
 
 

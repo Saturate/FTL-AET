@@ -7,7 +7,6 @@
 		<event load="AET_PUZZLE"/>
 	</eventList>
 
-
 -->
 
 <eventList name="NEUTRAL2">
@@ -26,5 +25,6 @@
 	<!-- CUSTOM AET EVENTS 	-->
 	<event load="AET_GIFTS"/>
 	<event load="ASTEROID_MINING"/>
+	<event load="AET_PREFTL_PLANET"/>
 
 </eventList>
