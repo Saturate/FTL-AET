@@ -257,32 +257,49 @@
 </eventList>
 
 <event name="ASTEROID_MINING_15">
-	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 15 rare metals, he replies "20 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
+	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 15 different rare metals, he replies "20 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
 		<item_modify>
 			<item type="scrap" min="20" max="20"/>
 		</item_modify>
 </event>
 
 <event name="ASTEROID_MINING_30">
-	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 30 rare metals, he replies "40 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
+	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 30 different rare metals, he replies "40 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
 		<item_modify>
 			<item type="scrap" min="40" max="40"/>
 		</item_modify>
 </event>
 
 <event name="ASTEROID_MINING_60">
-	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 60 rare metals, he replies "70 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
+	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 60 different rare metals, he replies "70 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
 		<item_modify>
 			<item type="scrap" min="70" max="70"/>
 		</item_modify>
 </event>
 
 <event name="ASTEROID_MINING_90">
-	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 90 rare metals, he replies "100 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
+	<text>Upon arrival, you find a small outpost trading scrap for any rare materials. You tell him you have 90 different rare metals, he replies "100 Scrap". You both accept, you both exchange goods and continue on with your lives.</text>
 		<item_modify>
 			<item type="scrap" min="100" max="100"/>
 		</item_modify>
 </event>
+
+<!-- Will add more random deaths later. -->
+
+<eventList name="RANDOM_DEATHS">
+	<event>
+		<text>One of your crewmembers had suicided from depression.</text>
+		<crewMember amount="-1"/>
+	</event>
+	<event>
+		<text>A widely known disease has spread among your crew. After two hours in the medbay, most of your crew was feeling much better afterwards. Unfortunately a crewmember didn't recover and had died.</text>
+		<crewMember amount="-1"/>
+	</event>
+	<event>
+		<text>One of your crewmembers had gone mad from a disease and stabbed another crewmember before eventually dying.</text>
+		<crewMember amount="-2"/>
+	</event>
+</eventList>
 
 <!-- SEMI-REPEATABLE -->
 
