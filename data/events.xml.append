@@ -16,11 +16,11 @@
 
 <!-- 
 	Event Name: 		PUZZLE MAN
-	Description: 		You get a offer to slove a great puzzle, will you try it?
+	Description: 		You get a offer to solve a great puzzle, will you try it?
 	Author: 			Allan Kimmer Jensen
 
 <event name="AET_PUZZLE_MAN">
-	<text>A old man needs your help. His friends has been traped in a locked room. The room can only be unlocked with the right awnsers. He warns you that it might not be safe to be unsure.</text>
+	<text>An old man needs your help. His friends has been locked inside a room. The room can only be unlocked with the right awnsers. He warns you that it might not be safe to be unsure.</text>
 	<choice>
 		<text>Accept the challenge.</text>
 		<event load="AET_PUZZLE_MAN_ENTER">
@@ -76,7 +76,7 @@
 
 <eventList name="AET_PUZZLE_MAN_FAIL">
 	<event>
-		<text>You failed. You hear a count down "1... 2... 3..." while you try to runaway one of your men dies.</text>
+		<text>You failed. You hear a count down "1... 2... 3..." while you try to runaway one of your men died.</text>
 	</event>
 </eventList>
 -->
