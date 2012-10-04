@@ -602,5 +602,14 @@
 <nameList race="human" sex="male">
 	<name>Allan</name>
 	<name>Adam</name>
+	<name>Anders</name>
 	<name>Gaben</name>
+
+	<!-- Males from the TV Show Firefly -->
+	<name>Mal Reynolds</name>
+	<name>Washburne</name>
+	<name>Jayne Cobb</name>
+	<name>Dr Simon</name>
+	<name>Shepherd Book</name>
+
 </nameList>
