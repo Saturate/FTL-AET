@@ -18,6 +18,8 @@
 	Event Name: 		PUZZLE MAN
 	Description: 		You get a offer to solve a great puzzle, will you try it?
 	Author: 			Allan Kimmer Jensen
+	
+	TODO: Needs work before included, feel free to add anything, also I am not sure the syntax is correct!
 
 <event name="AET_PUZZLE_MAN">
 	<text>An old man needs your help. His friends has been locked inside a room. The room can only be unlocked with the right awnsers. He warns you that it might not be safe to be unsure.</text>
@@ -80,6 +82,78 @@
 	</event>
 </eventList>
 -->
+
+<!-- 
+	Event Name: 		Pre-FTL Society Event
+	Author: 			TheKillerNacho
+	
+	
+	NEEDS TESTING BEFORE INCLUDED
+	
+	
+	<event name="AET_PREFTL_PLANET">
+   <text>You come across a planet inhabited by human-like aliens that seem to be a pre-FTL society. Usually it isn't Federation policy to interfere in the affairs of pre-FTL societies, but the planet appears to have an abundance of natural resources that could be helpful.</text>
+   <choice hidden="true">
+      <text>Do nothing to interfere</text>
+         <event>
+            <text>You power up your FTL and decide to leave the pre-FTL civilization. Even during rough times, we should not compromise our ideals.</text>
+         </event>
+   </choice>
+   <choice hidden="true">
+      <text>Send down your crew to make first contact</text>
+      <event load="AET_PREFTL_CONTACT"/>
+   </choice>
+   <choice hidden="true">
+      <text>Attack them and take what you need</text>
+      <event load="AET_PREFTL_ATTACK"/>
+   </choice>
+   <choice hidden="true" req="human">
+      <text>(Human Crew) Send down your Human crew to make first contact.</text>
+         <event>
+            <text>This society appears to respond well to your Human crew. After hearing about your mission to stop the Rebels, its inhabitants decide to give you resources to help in any way they can. Furthermore, one of their top scientists, eager to explore space, requests to join your crew.</text>
+            <autoReward level="MED">standard</autoReward>
+            <crewMember amount="1" class="human"/>
+         </event>
+   </choice>
+</event>
+
+<eventList name="AET_PREFTL_CONTACT">
+   <event>
+      <text>Your crew's strange appearance startles the people in the planet. Their governments take your greeting to be a sign of a future invasion and attack them. Most of your crew were able to make it back to the ship, but one of your crewmen aren't going to make it...</text>
+      <crewMember amount="-1"/>
+   </event>
+   <event>
+      <text>This society appears to be forward-thinking and gracefully accept your offer of friendship. After hearing about your mission to stop the Rebels, its inhabitants decide to give you resources to help in any way they can.</text>
+      <autoReward level="MED">standard</autoReward>
+   </event>
+   <event>
+      <text>Your crew's strange appearance startles the people on the planet. Their governments are eventually able to calm down their frightened citizens but request that you leave. However, a forward-thinking scientist, eager to explore space, requests to join your crew.</text>
+      <crewMember amount="1" class="human"/>
+   </event>
+   <event>
+      <text>Your crew's strange appearance startles the people on the planet. Their governments are eventually able to calm down their frightened citizens but request that you leave, as they are not ready yet for first contact.</text>
+   </event>
+</eventList>
+
+<eventList name="AET_PREFTL_ATTACK">
+   <event>
+      <text>Desperate times call for desperate measures. You power up your weapons and target what appears to be a city with considerable resources. The city is turned to rubble in a matter of minutes. You send your crew to gather as much scrap as they can get their hands on, when you discover they were able to get a distress signal out before being destroyed. The Rebel fleet will surely be able to pick up this signal!</text>
+      <modifyPursuit amount="1"/>
+      <autoReward level="LOW">scrap_only</autoReward>
+   </event>
+   <event>
+      <text>Desperate times call for desperate measures. You power up your weapons and target what appears to be a city with considerable resources. After your first volley of shots, you receive a signal from the planet, it seems they want to surrender. They give you a significant cache of resources in exchange for not destroying them.</text>
+      <autoReward level="MED">standard</autoReward>
+   </event>
+   <event>
+      <text>Desperate times call for desperate measures. You power up your weapons and target what appears to be a city with considerable resources. Before you get the first shot off, however, a Zoltan ship approaches, seeing what you are planning to do. They power up weapons, this planet must be under the protection of the Zoltan!</text>
+      <ship load="ZOLTAN_SHIP" hostile="true"/>
+   </event>
+</eventList>
+	
+-->
+
+
 
 <!-- 
 	Event Name: 		GIFT EVENTS
