@@ -306,3 +306,243 @@
 <!-- NOT REPEATABLE -->
 
 <!-- Don't touch anything above this line. -->
+
+<eventList name="SPIT">
+   <event load="F_EXPLORE1"/>
+   <event load="F_EXPLORE2"/>
+   <event load="F_TVSHOW"/>
+   <event load="FRADARSTATION"/>
+   <event load="FANONREFUSABLEOFFER"/>
+   <event load="FPARTYVAN"/>
+</eventList>
+
+<!-- IMPORTANT! All of these events are set to unique, but that can be changed at will -->
+
+<!--
+   Event Name:       Exploration 1
+   Description:       Basic, non-immersive, event.
+   Author:       LtSpitfire
+-->
+
+<event name="F_EXPLORE1" unique="true">
+   <text>Scans reveal a nearby small station. There is a big hole in one of the walls and there are no confirmed life signs inside. What should we do, commander?</text>
+   <choice hidden="true">
+      <text>Explore the station looking for something useful.</text>
+      <event load="FSPACESTATION_EXPLORE_RESULTS"/>
+   </choice>
+   <choice>   
+      <text>We will wait for the FTL Drive to charge.</text>
+   </choice>
+</event>
+
+<eventList name="FSPACESTATION_EXPLORE_RESULTS">
+   <event>
+      <text>Sadly, a brief exploration yields nothing of interest.</text>
+   </event>
+   <event>
+      <text>The crew is able to find some fuel bars and retrieve them safely.</text>
+      <autoReward level="HIGH">fuel_only</autoReward>
+   </event>
+   <event>
+      <text>The crew finds some missiles behind a locked door in the storage, which they unlocked without major problems. </text>
+      <autoReward level="HIGH">missiles_only</autoReward>
+   </event>
+   <event>
+      <text>Your crew approachs to the Engineering room and find it closed. After forcing the door you find someone with a breather typing very fast to a keyboard. "They want us all dead!" types continously... The crew tried to take him back and treat him in the medbay but he refused and shaked to keep typing. They left him there, typing... </text>
+   </event>   
+   <event>
+      <text>The crew returns fast to the ship when they saw it was a trap! Some explosives were attached to the key points of the station and the resulting explosion sends a piece of the station against your ship and damages it. Thankfully it was almost a scratch. </text>
+      <damage amount="1"/>
+   </event>
+</eventList>
+
+<!--
+   Event Name:       Exploration 2
+   Description:       Basic, non-immersive, event.
+   Author:       LtSpitfire
+-->
+
+<event name="F_EXPLORE2" unique="true">
+   <text>There is a ship debris drifting around the orbit of a nearby planet, we could retrieve the cargo but the ship is inside the asteroid belt of the planet.</text>
+   <choice hidden="true">
+      <text>Slowly approach and send the crew.</text>
+      <event load="FSHIPDEBRIS_EXPLORE_RESULTS"/>
+   </choice>
+   <choice>   
+      <text>We are not coming closer, we can't risk taking damage.</text>
+      <event/>
+   </choice>
+</event>
+
+<eventList name="FSHIPDEBRIS_EXPLORE_RESULTS">
+   <event>
+      <text>Seems like someone already took the cargo, there wasn't even fuel.</text>
+   </event>
+   <event>
+      <text>Your crew finds the ship had an augmentation installed and your engineers are able to retrieve it.</text>
+      <autoReward level="HIGH">augment</autoReward>
+   </event>
+   <event>
+      <text>The transport ship had crashed to an asteroid and you are able to retrieve some scrap from it.</text>
+      <autoReward level="MED">scrap_only</autoReward>
+   </event>
+   <event>
+      <text>The ship was a bait! A pirate ship hiding attacks you from your left!</text>
+      <ship load="PIRATE" hostile="true"/>
+      <environment type="asteroid"/>
+   </event>
+</eventList>
+
+<!--
+   Event Name:       TV Show
+   Description:       Extense, immersive, weird. Player is shown 4 choices, 3 to play; 1 to avoid this event. If player plays there's 50% combat 50% reward.
+   Author:       LtSpitfire
+-->
+
+<event name="F_TVSHOW" unique="true">
+   <text>Your radar detects a little signature coming at a very, very high speed, you order your crew to target it but as you're saying it the comm channel sounds loud as cameras surround your ship... "Hello dear friend! Welcome to our TV Show 'The Kerr Holes'! Which hole do you choose, our fantastic contestant?"</text>
+   <choice hidden="true">
+      <text>Hole number one!</text>
+      <event load="FHOLE1"/>
+   </choice>
+   <choice hidden="true">
+      <text>Hole number two!</text>
+      <event load="FHOLE2"/>
+   </choice>
+   <choice hidden="true">
+      <text>Hole number three!</text>
+      <event load="FHOLE3"/>
+   </choice>
+   <choice>   
+      <text>Let's slowly move away from here...</text>   
+   </choice>
+</event>
+
+<eventList name="FHOLE1">
+   <event>
+      <text>And behind hole number one there is a fabulous pack with lots of things, what today's adventurer needs!</text>
+      <autoReward level="MED">stuff</autoReward>
+   </event>
+   <event>
+      <text>Almost as the hole opens you have to evade some shots, seems like it was a bad prize. Time to fight!</text>
+      <ship load="PIRATE" hostile="true"/>
+   </event>
+</eventList>
+<eventList name="FHOLE2">
+   <event>
+      <text>And behind hole number two there is a fabulous augment, which is installed by a very professional engineering team.</text>
+      <autoReward level="HIGH">augment</autoReward>
+   </event>
+   <event>
+      <text>Almost as the hole opens you have to evade some shots, seems like it was a bad prize.</text>
+      <ship load="PIRATE" hostile="true"/>
+   </event>
+</eventList>
+<eventList name="FHOLE3">
+   <event>
+      <text>And behind hole number three there is a marvelous weapon, installed in an eye blink.</text>
+      <autoReward level="HIGH">weapon</autoReward>
+   </event>
+   <event>
+      <text>Almost as the hole opens you have to evade some shots, seems like it was a bad prize.</text>
+      <ship load="PIRATE" hostile="true"/>
+   </event>
+</eventList>
+
+<!--
+   Event Name:       Radar
+   Description:       Basic, non-immersive, event. Shows map to player.
+   Author:       LtSpitfire
+-->
+
+<event name="FRADARSTATION" unique="true">
+   <text>Your crew finds a populated radar station, they give you an update of the map free of charge. You thank them lots of times before moving on.</text>
+   <reveal_map/>
+</event>
+
+<!--
+   Event Name:       Choice 1
+   Description:       Basic, immersive, high rewarding event. 2 choices.
+   Author:       LtSpitfire
+-->
+
+<event name="FANONREFUSABLEOFFER">
+   <text>A very pompous spaceship comes closer. "Hello Mr.Commander. My boss, Mr.Heilener wants to offer you a deal. You send us a "1" and a planet blows up, but you will receive this mysterious box, you send us a "0" and this conversation never happened. What do you say...?"</text>
+   <choice hidden="true">
+      <text>Send 1</text>
+      <event load="F1"/>
+   </choice>   
+   <choice hidden="true">
+      <text>Send 0</text>
+      <event load="F0"/>
+   </choice>   
+</event>
+
+<eventList name="F1">
+   <event>
+      <text>You send the 1 signal, and a new box appears in your cargo as the pompous spaceship jumps. Nightmares start to haunt you still as you think if it was worth it... Your crew looks at you with a "He couldn't have chosen this..." face, one of them tells you to leave him in the nearest planet.</text>
+      <item_modify>
+         <item type="scrap" min="100" max="150"/>
+      </item_modify>
+      <crewMember amount="-1"/>
+         <choice>
+         <text>Continue.</text>
+            <event>
+               <text>As you see what Mr.Heilener left you, a ship jumps to your position. "SO YOU ACCEPTED! KILL THIS GENOCIDE!". The ship starts to fire.</text>
+               <ship load="PIRATE" hostile="true"/>
+            </event>
+         </choice>
+   </event>
+</eventList>   
+<eventList name="F0">
+   <event>
+      <text>You send the 0 signal, and you tell Mr.Heilener to shove the signal up somewhere. Mr.Heilener doesn't even say anything and jumps away.</text>
+         <choice>
+         <text>Continue.</text>
+            <event>
+               <text>As you see Mr.Heilener leave, a ship jumps to you position. "We will never be able to thank you enough for not sending that signal...". A new weapon is installed in your ship.</text>
+               <autoReward level="HIGH">weapon</autoReward>
+         </event>
+         </choice>
+   </event>
+</eventList>
+
+<!--
+   Event Name:       Quest
+   Description:       Extense, immersive, weird. Multiple outcomes.
+   Author:       LtSpitfire
+-->
+
+<event name="FPARTYVAN">   
+   <text>The comms channel opens suddenly and all you can hear is music and noise, "Heeey dude, we just got lost and I was wondering if you could take us to our party, duuuuude".</text>
+   <ship load="CIVILIAN_SHIP" hostile="false"/>
+      <choice hidden="true">
+         <text>Accept.</text>
+         <event>
+            <text>"That's cool duuuuude, you're coooooool, have some fuel to keep the party going ooooon!". You start to think this was a bad, very bad idea.</text>
+            <quest event="PARTY_TIME"/>
+            <autoReward level="LOW">fuel_only</autoReward>
+         </event>
+      </choice>
+      <choice>
+         <text>Decline.</text>
+         <event>
+            <text>"Aaaw come on duuude, let's keep the party going." You see how they power up their engines and jumps who knows where.</text>
+         </event>
+      </choice>
+</event>
+<eventList name="PARTY_TIME">
+   <event>
+      <text>"Wow thanks duuuuude, I'll join your crew so the party keeps going duuuuude." You start to stamp your head on the closest wall.</text>
+      <autoReward level="MED">scrap_only</autoReward>
+      <crewMember amount="1">Daddy Boy</crewMember>
+   </event>
+   <event>
+      <text>"Wow duuuude that was so cool we want to give you this in exchange from taking us here... Duuuuuuudeeeeee".</text>
+      <autoReward level="HIGH">weapon</autoReward>
+   </event>
+   <event>
+      <text>After reaching the party beacon, you only see remains of ships, recently destroyed by a pirate who is looting them. "Two more to the party, attack them!".</text>
+      <ship load="PIRATE" hostile="true"/>     
+   </event>
+</eventList> 
