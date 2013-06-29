@@ -2,10 +2,6 @@
 	FTL Additional Events & Texts (FTL: AET)
 -->
 
-<nameList race="human" sex="female">
-	<name>Fuck you guys</name>
-</nameList>
-
 <nameList race="human" sex="male">
 	<name>Allan</name>
 	<name>Adam</name>
